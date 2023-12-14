@@ -23,10 +23,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script>
-            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-        </script>
+        <link rel="icon" type="image/x-icon" href="{{ asset('images/favico1.png') }}">
     </head>
     <body class="antialiased">
         <div class="page-holder">
