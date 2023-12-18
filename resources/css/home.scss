@@ -140,10 +140,11 @@ nav{
         height: 100%;
         display: flex;
         flex-flow: column;
-        justify-content: space-evenly;
+        gap: 50px;
         h2{
           color: #D5BAB2;
           font-size: 50px;
+          margin-top: 10px;
         }
         a{
           color: #D5BAB2;
@@ -193,7 +194,6 @@ nav{
   display: flex;
   width: 100%;
   justify-content: center;
-  height: 75px;
 *{
   font-size: 100px;
 }
@@ -355,6 +355,8 @@ nav{
       .icon-holder{
         display: flex;
         flex-direction: row;
+        width: 40%;
+        justify-content: space-between;
         .icons{
           height: 60px;
           width: 60px;
@@ -374,7 +376,7 @@ nav{
 
 // made by anthony schuurmans
 .popup-container {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);

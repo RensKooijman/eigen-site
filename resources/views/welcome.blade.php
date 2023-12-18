@@ -19,6 +19,9 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            .alert{
+                margin-bottom: 0 !important;
+            }
         </style>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
@@ -26,7 +29,23 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('images/favico1.png') }}">
     </head>
     <body class="antialiased">
+        @if ($message = Session::get('failure'))
+            <div class="alert alert-danger alert-block">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success alert-block">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
         <div class="page-holder">
+            <div class="popup-container">
+                <div class="popup-arrow"></div>
+                <div class="popup-content">Description will be shown here</div>
+            </div>
             <div class="row content">
                 <div class="col persenol">
                     <nav>
@@ -141,7 +160,7 @@
                     </button>
                 </div>
             </div>
-            <div class="next">
+            <div class="next" style="margin-top: 100px;">
                 <a href="#third" class="material-symbols-outlined">keyboard_double_arrow_down</a>
             </div>
         </div>
@@ -185,7 +204,7 @@
                     </div>
                 </div>
             </div>
-            <div class="next">
+            <div class="next" style="margin-top: 30px;">
                 <a href="#fourth" class="material-symbols-outlined">keyboard_double_arrow_down</a>
             </div>
         </div>
@@ -194,7 +213,8 @@
             <div class="contact">
                 <div class="contact-form">
                     <div class="contact-left px-3">
-                        <form action="POST">
+                        <form action="{{ route('message') }}" method="POST">
+                            @csrf
                             <label for="name">Name:</label>
                             <input name="name" placeholder="Name..." type="text">
                             <label for="email">E-mail:</label>
@@ -214,10 +234,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="popup-container">
-            <div class="popup-arrow"></div>
-            <div class="popup-content">Description will be shown here</div>
         </div>
     </body>
     <script src="{{ asset('js/app.js') }}"></script>

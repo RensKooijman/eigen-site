@@ -18,3 +18,4 @@ use App\Http\Controllers\IndexController;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/dice', [IndexController::class, 'dice'])->name('dice');
+Route::post('/', [IndexController::class, 'message'])->name('message');
