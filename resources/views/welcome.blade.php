@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="next">
+            <div class="next jump">
                 <a href="#second" class="material-symbols-outlined">keyboard_double_arrow_down</a>
             </div>
         </div>
@@ -96,7 +96,7 @@
                                                 <img src="{{ asset('images/image8.png')  }}" alt="emblem">
                                                 <img src="{{ asset('images/image3.png')  }}" alt="emblem">
                                             </div>
-                                            <h3>Discription:</h3>
+                                            <h3>description:</h3>
                                             <p class="description">In the collaborative effort of a school project, our dedicated team successfully designed and developed Krashosting within a timeframe of 30 work hours. This platform facilitates the effortless exploration and purchase of hosting packages, complemented by insightful articles. A key highlight is the integration of the Spring Boot API, providing a robust backend for a seamless user experience. </p>
                                         </div>
                                     </div>
@@ -109,8 +109,8 @@
                                     <div class="img"></div>
                                     <div class="inner-info">
                                         <div class="left">
-                                            <h2>abscent system</h2>
-                                            <a href="" target="_blank">www.test.com</a>
+                                            <h2>attendence system</h2>
+                                            <a href="" target="_blank">URL not available</a>
                                             <a href="" target="_blank" class="button">visit</a>
                                         </div>
                                         <div class="right">
@@ -120,7 +120,7 @@
                                                 <img src="{{ asset('images/image9.png')  }}" alt="emblem">
                                                 <img src="{{ asset('images/image10.png') }}" alt="emblem">
                                             </div>
-                                            <h3>Discription:</h3>
+                                            <h3>description:</h3>
                                             <p class="description">Embarking on a solo school assignment, I crafted an Abscent System using Laravel and Bootstrap. This project was a deep dive into CRUD operations, enhancing my skills in data management. The system, designed for attendance tracking, showcases the synergy of Laravel's backend efficiency and Bootstrap's responsive frontend. This endeavor marks my dedication to learning and applying modern web technologies in practical projects.</p>
                                         </div>
                                     </div>
@@ -142,7 +142,7 @@
                                                 <img src="{{ asset('images/image8.png')  }}" alt="emblem">
                                                 <img src="{{ asset('images/image3.png')  }}" alt="emblem">
                                             </div>
-                                            <h3>Discription:</h3>
+                                            <h3>description:</h3>
                                             <p class="description">For a solo school project, I created a digital dice application. This endeavor focused on honing my programming skills in user interface design and logic implementation. The project aimed to simulate traditional dice rolls, showcasing my ability to independently conceptualize and execute coding tasks. This hands-on experience reinforced my commitment to practical learning and contributed to my growth as a developer.</p>
                                         </div>
                                     </div>
@@ -220,7 +220,7 @@
                             <label for="email">E-mail:</label>
                             <input name="email" placeholder="E-mail..." type="text">
                             <label for="message">Message:</label>
-                            <textarea name="message" placeholder="Messege..." type="text-area"></textarea>
+                            <textarea name="message" placeholder="Message..." type="text-area"></textarea>
                             <button>send</button>
                         </form>
                     </div>
