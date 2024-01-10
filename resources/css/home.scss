@@ -8,11 +8,12 @@
   display: none;
 }
 body{
+  scrollbar-width: none;
   overflow-x: hidden;
 }
 
-$circleSize: 350px;  // Adjust the size of the outer circle
-$smallCircleSize: 175px;  // Adjust the size of the smaller circles
+$circleSize: 300px;  // Adjust the size of the outer circle
+$smallCircleSize: 150px;  // Adjust the size of the smaller circles
 $smallCircleCount: 12;  // Adjust the number of smaller circles
 
 @mixin circle($size) {
@@ -54,39 +55,75 @@ $smallCircleCount: 12;  // Adjust the number of smaller circles
     }
   }
 }
+
+.inner-circle > img{
+  width: 111px;
+  height: 111px;
+}
+
+@media screen and (max-width: 600px) {
+  $circleSize: 150px;  // Adjust the size of the outer circle
+  $smallCircleSize: 75px;  // Adjust the size of the smaller circles
+  $smallCircleCount: 12;  // Adjust the number of smaller circles
+
+  @function calculatePosition($index) {
+    $angle: math.div(360deg, $smallCircleCount);
+    $positionX: math.sin($angle * $index) * ($circleSize  - $smallCircleSize)*2;
+    $positionY: math.cos($angle * $index) * ($circleSize - $smallCircleSize)*2;
+    @return $positionX, $positionY;
+  }
+
+  .outer-circle {
+    @include circle($circleSize);
+    position: relative;
+    border: 6px #0AD3FF solid;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    @for $i from 1 through $smallCircleCount {
+      .inner-circle:nth-child(#{$i}) {
+        @include circle($smallCircleSize);
+        $position: calculatePosition($i);
+        left: nth($position, 1);
+        top: nth($position, 2);
+        transform: translate(50%, 50%);
+      }
+    }
+  }
+  .inner-circle > img{
+    width: 55px;
+    height: 55px;
+  }  
+}
 .page-holder{
   height: 100vh;
-  width: 100vw;
-  display: block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: #35353D;
   padding-left: 20px;
   padding-right: 20px;
 }
-
+.header > h1{
+  font-size: 90px;
+  color: #0AD3FF;
+}
 .content{
   height: 90%;
 }
-
 .circleholder{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 102%;
+  height: 110%;
 }
-
-.inner-circle > img{
-  width: 130px;
-  height: 130px;
-}
-
 .about{
   padding-left: 80px;
   h1{
-    font-size: 90px;
+    font-size: 5vw;
     color: #0AD3FF;
   }
   p{
-    font-size: 32px;
+    font-size: 1.9vw;
     color: #D5BAB2;
   }
 }
@@ -111,6 +148,16 @@ nav{
   display: flex;
   flex-direction: column;
 }
+.carosuel-holder{
+  height: 100%;
+}
+.carousel-control-next, .carousel-control-prev {
+  width: auto;
+}
+.visually-hidden{
+  top: 189.29px;
+  bottom: 189.29px;
+}
 .holder{
   display: flex;
   width: 100%;
@@ -118,8 +165,8 @@ nav{
   .info{
     display: flex;
     margin: auto;
-    width: 1400px;
-    height: 640px;
+    width: 90%;
+    height: 68vh;
     background-color: #23232B;
     border-radius: 100px;
     flex-flow: column;
@@ -127,6 +174,7 @@ nav{
       height: 45%;
       width: 100%;
       background-repeat: no-repeat !important;
+      background-size: cover !important;
       border-radius: 100px 100px 0px 0px;
     }
     .inner-info{
@@ -152,13 +200,15 @@ nav{
         }
         .button{
           color: #D5BAB2;
-          width: 370px;
-          height: 90px;
+          width: 320px;
+          height: 80px;
           background-color: #35353D;
           border-radius: 25px;
-          font-size: 50px;
+          font-size: 40px;
           text-decoration: none;
-          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
       .right{
@@ -172,7 +222,7 @@ nav{
         }
         p{
           color: #D5BAB2;
-          font-size: 22px;
+          font-size: 1.2vw;
           width: 90%;
         }
         .labels{
@@ -194,13 +244,10 @@ nav{
   display: flex;
   width: 100%;
   justify-content: center;
+  margin-top: auto;
 *{
   font-size: 100px;
 }
-}
-.header > h1{
-  font-size: 90px;
-  color: #0AD3FF;
 }
 .carousel-item:nth-child(1)>.holder>.info>.img{
   background: url('../images/site1.png');
@@ -264,7 +311,7 @@ nav{
       }
       p{
         color: #D5BAB2;
-        font-size: 23px;
+        font-size: 1vw;
       }
     }
   }
@@ -290,12 +337,12 @@ nav{
 
 .contact{
   width: 100%;
-  height: 85%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   .contact-form{
-    width: 75%;
+    width: 85%;
     height: 75%;
     display: flex;
     flex-direction: row;
@@ -319,14 +366,14 @@ nav{
           background-color: #D5BAB2;
           color: #35353D;
           border-radius: 20px;
-          height: 50px;
+          height: 45px;
           font-size: 22px;
         }
         textarea{
           background-color: #D5BAB2;
           color: #35353D;
           border-radius: 20px;
-          height: 150px;
+          height: 130px;
           font-size: 22px;
         }
         button{
@@ -418,4 +465,186 @@ nav{
   animation-delay: 2s;
   transform-origin: 50% 50%;
   animation: jump 2s linear normal 7;
+}
+
+
+@media screen and (max-width: 600px) {
+  #carouselExampleControls>button{
+    display: none;
+  }
+  nav{
+    display: none;
+  }
+  .page-holder{
+    height: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .about{
+    padding-left: 0px;
+    h1{
+      font-size: 65px;
+    }
+    p{
+      font-size: 30px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .next{
+    display: none;
+  }
+  .header > h1{
+    font-size: 50px;
+  }
+  .holder{
+    .info{
+      width: 100%;
+      height: 75%;
+      border-radius: 75px;
+      .img{
+        height: 100px;
+        width: 100%;
+        border-radius: 75px 75px 0px 0px;
+      }
+      .inner-info{
+        height: 80%;
+        width: 100%;
+        .left{
+          gap: 15px;
+          h2{
+            font-size: 30px;
+            margin-top: 20px;
+          }
+          a{
+            font-size: 13px;
+          }
+          .button{
+            width: 135px;
+            height: 45px;
+            border-radius: 12.5px;
+            font-size: 20px;
+          }
+        }
+        .right{
+          p{
+            font-size: 15px;
+            width: 95%;
+            padding-bottom: 25px;
+          }
+          .labels{
+            margin-top: 10px;
+            img{
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pointer {
+    height: 30px;
+  }
+  .pointer:after {
+    border-left: 15px solid #35353D;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+  .pointer:before {
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+  
+  .life-holder{
+    height: 75%;
+    width: 100%;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    .life-experiences{
+      padding: 10px;
+      h2{
+        font-size: 50px;
+      }
+      .experiences{
+        height: 100%;
+        h3{
+          font-size: 25px;
+          margin-bottom: 3px;
+        }
+        p{
+          font-size: 23px;
+          margin: 0;
+        }
+      }
+    }
+  
+    $bannerCollor: '#ff4242', '#A589DD', '#0AD3FF', '#58CB00';
+    $experience: 4;
+    @for $i from 1 through $experience{
+      .life-experiences:nth-child(#{$i}){
+        .experiences > .pointer:before{
+          border-left: unquote(nth($bannerCollor,$i)) 15px solid;
+        } 
+      }
+    }
+  }
+
+  .contact{
+    width: 100%;
+    height: 85%;
+    .contact-form{
+      width: 100%;
+      height: 400px;
+      border-radius: 25px;
+      margin-bottom: 50px;
+      .contact-left{
+        width: 50%;
+        height: 100%;
+        form{
+          height: 100%;
+          width: 100%;
+          label{
+            font-size: 21.5px;
+          }
+          input{
+            border-radius: 10px;
+            height: 36px;
+            font-size: 14px;
+          }
+          textarea{
+            border-radius: 10px;
+            height: 100px;
+            font-size: 14px;
+          }
+          button{
+            width: 200px;
+            height: 40px;
+            border-radius: 12.5px;
+            font-size: 25px;
+          }
+        }
+      }
+      .contact-right{
+        width: 50%;
+        height: 100%;
+        p{
+          font-size: 12.5px;
+        }
+        .icon-holder{
+          width: 100%;
+          .icons{
+            height: 45px;
+            width: 45px;
+            img{
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }

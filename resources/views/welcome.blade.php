@@ -47,7 +47,7 @@
                 <div class="popup-content">Description will be shown here</div>
             </div>
             <div class="row content">
-                <div class="col persenol">
+                <div class="col-lg-6 col-sm-12 persenol">
                     <nav>
                         <div><a href="#second"><p>Projects</p></a></div>
                         <div><a href="#third"><p>Experience</p></a></div>
@@ -63,7 +63,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="circleholder col">
+                <div class="circleholder col-lg-6 col-sm-12">
                     <div class="outer-circle">
                         @for($i = 1; $i <=  12; $i++)
                             <div class="inner-circle move-option" value="{{$i}}"><img src="{{ asset('images/image' . $i . '.png')  }}" alt="img"></div>
@@ -77,10 +77,10 @@
         </div>
         <div class="page-holder px-4">
             <div id="second" class="header"><h1>Projects</h1></div>
-            <div class="carousel">
+            <div class="carousel-holder my-4">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" data-bs-interval="20000">
                             <div class="holder">
                                 <div class="info">
                                     <div class="img"></div>
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="20000">
                             <div class="holder">
                                 <div class="info">
                                     <div class="img"></div>
@@ -127,7 +127,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="20000">
                             <div class="holder">
                                 <div class="info">
                                 <div class="img"></div>
@@ -160,14 +160,14 @@
                     </button>
                 </div>
             </div>
-            <div class="next" style="margin-top: 100px;">
+            <div class="next">
                 <a href="#third" class="material-symbols-outlined">keyboard_double_arrow_down</a>
             </div>
         </div>
         <div class="page-holder px-4">
             <div class="header" id="third"><h1>Experience</h1></div>
             <div class="life-holder px-5 row">
-                <div class="life-experiences col">
+                <div class="life-experiences col-lg col-sm-6">
                     <h2>Events</h2>
                     <div class="experiences">
                         <h3 class="subject">Hackathon</h3>
@@ -176,7 +176,7 @@
                         <div class="pointer"></div>
                     </div>
                 </div>
-                <div class="life-experiences col">
+                <div class="life-experiences col-lg col-sm-6">
                     <h2>Education</h2>
                     <div class="experiences">
                         <h3 class="subject">Webdevelopment</h3>
@@ -185,7 +185,7 @@
                         <div class="pointer"></div>
                     </div>
                 </div>
-                <div class="life-experiences col">
+                <div class="life-experiences col-lg col-sm-6">
                     <h2>Work</h2>
                     <div class="experiences">
                         <h3 class="subject">Domino’s pizza</h3>
@@ -194,7 +194,7 @@
                         <div class="pointer"></div>
                     </div>
                 </div>
-                <div class="life-experiences col">
+                <div class="life-experiences col-lg col-sm-6">
                     <h2>Hobbies</h2>
                     <div class="experiences">
                         <h3 class="subject">Basketbal</h3>
@@ -204,7 +204,7 @@
                     </div>
                 </div>
             </div>
-            <div class="next" style="margin-top: 30px;">
+            <div class="next">
                 <a href="#fourth" class="material-symbols-outlined">keyboard_double_arrow_down</a>
             </div>
         </div>
@@ -225,7 +225,7 @@
                         </form>
                     </div>
                     <div class="contact-right px-3">
-                        <p class="pt-4">Info:</p>
+                        <p class="pt-lg-4 pt-3">Info:</p>
                         <div class="icon-holder">
                             <a href="https://www.linkedin.com/in/rens-kooijman-1130a9189/"  target="_blank" class="icons"><img src="{{ asset('images/ico1.png')  }}" alt="link"></a>
                             <a href="https://github.com/RensKooijman"  target="_blank" class="icons"><img src="{{ asset('images/ico2.png')  }}" alt="link"></a>
