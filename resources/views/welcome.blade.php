@@ -88,7 +88,7 @@
                                         <div class="left">
                                             <h2>krashosting</h2>
                                             <a href="https://krashosting-lite.tobiasvandeven.nl/home/" target="_blank">krashosting-lite.tobiasvandeven.nl</a>
-                                            <a href="https://krashosting-lite.tobiasvandeven.nl/home/" target="_blank" class="button">visit</a>
+                                            <a href="https://krashosting-lite.tobiasvandeven.nl/home/" target="_blank" class="button">Visit</a>
                                         </div>
                                         <div class="right">
                                             <div class="labels ">
@@ -111,7 +111,10 @@
                                         <div class="left">
                                             <h2>attendence system</h2>
                                             <a href="" target="_blank">URL not available</a>
-                                            <a href="" target="_blank" class="button">visit</a>
+                                            <div class="button-holder">
+                                                <a href="" target="_blank" class="button">Visit</a>
+                                                <a href="https://github.com/RensKooijman/crud" target="_blank" class="button">Github</a>
+                                            </div>
                                         </div>
                                         <div class="right">
                                             <div class="labels">
@@ -135,7 +138,10 @@
                                         <div class="left">
                                             <h2>dice</h2>
                                             <a href="{{ url('dice') }}" target="_blank">{{ url("dice") }}</a>
-                                            <a href="{{ url('dice') }}" target="_blank" class="button">visit</a>
+                                            <div class="button-holder">
+                                                <a href="{{ url('dice') }}" target="_blank" class="button">Visit</a>
+                                                <a href="https://github.com/RensKooijman/dice" target="_blank" class="button">Github</a>
+                                            </div>      
                                         </div>
                                         <div class="right">
                                             <div class="labels">

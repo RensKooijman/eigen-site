@@ -188,7 +188,8 @@ nav{
         height: 100%;
         display: flex;
         flex-flow: column;
-        gap: 50px;
+        justify-content: space-evenly;
+        // gap: 50px;
         h2{
           color: #D5BAB2;
           font-size: 50px;
@@ -209,6 +210,16 @@ nav{
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+        .button-holder{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          .button{
+            width: 200px;
+            height: 60px;
+            border-radius: 20px;
+          } 
         }
       }
       .right{
@@ -525,6 +536,11 @@ nav{
             height: 45px;
             border-radius: 12.5px;
             font-size: 20px;
+          }
+          .button-holder{
+            .button{
+              width: 70px;
+            }
           }
         }
         .right{
