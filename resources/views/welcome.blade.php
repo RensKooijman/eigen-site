@@ -175,38 +175,82 @@
             <div class="life-holder px-5 row">
                 <div class="life-experiences col-lg col-sm-6">
                     <h2>Events</h2>
-                    <div class="experiences">
-                        <h3 class="subject">Hackathon</h3>
-                        <h3 class="time-stamps">2023:</h3>
-                        <p class="experience-text">A web development hackathon featuring multiple schools in a friendly competition. Students from various institutions come together to showcase their coding and design skills by creating innovative websites within a limited timeframe. This event fosters collaboration, creativity, and problem-solving as teams race against the clock to develop functional and aesthetically pleasing websites, with judges awarding prizes for the most impressive projects.</p>
-                        <div class="pointer"></div>
+                    <div class="experience-holder">
+                        <div class="experiences">
+                            <h3 class="subject">Hackathon</h3>
+                            <h3 class="time-stamps">2023:</h3>
+                            <p class="experience-text">A web development hackathon is a friendly competition. Students from various institutions come together to showcase their coding and design skills by creating innovative websites within a limited timeframe. This event fosters collaboration and problem-solving as teams race against the clock to develop functional and aesthetically pleasing websites, with judges.</p>
+                            <div class="pointer"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="life-experiences col-lg col-sm-6">
                     <h2>Education</h2>
-                    <div class="experiences">
-                        <h3 class="subject">Webdevelopment</h3>
-                        <h3 class="time-stamps">2021-now:</h3>
-                        <p class="experience-text">web development that delves deep into the intricacies of both front-end and back-end development.While I appreciate the importance of creating visually appealing and user-friendly front-end experiences, my true passion lies in back-end development. I thrive on architecting the invisible backbone of web applications, ensuring data integrity, security, and seamless functionality.</p>
-                        <div class="pointer"></div>
+                    <div class="experience-holder">
+                        <div class="experiences">
+                            <h3 class="subject">ROC Tilburg (Webdevelopment)</h3>
+                            <h3 class="time-stamps">2021-now:</h3>
+                            <p class="experience-text">web development that delves deep into the intricacies of both front-end and back-end development.While I appreciate the importance of creating visually appealing and user-friendly front-end experiences, my true passion lies in back-end development. I thrive on architecting the invisible backbone of web applications, ensuring data integrity, security, and seamless functionality.</p>
+                            <div class="pointer"></div>
+                        </div>
+                        <div class="experiences hidExperiences">
+                            <h3 class="subject">Curio Effent (vmbo-gt)</h3>
+                            <h3 class="time-stamps">2017-2021:</h3>
+                            <p class="experience-text">my academic journey became a captivating math equation. Subjects involving math were intriguing puzzles where I found my stride. Excelling in math, physics, chemistry and economics it was a testament to my natural affinity for mathematical concepts. These subjects were a stepping stone for my problem-solving skills. My high school years were marked by the unraveling mathematical mysteries, a passion that continues to shape my analytical.</p>
+                            <div class="pointer"></div>
+                        </div>
+                        <div class="experiences hidExperiences">
+                            <h3 class="subject">OBS Pionier</h3>
+                            <h3 class="time-stamps">2009-2017:</h3>
+                            <p class="experience-text">In grade school, a fascination with games and possobilities with coding morphed into a decisive moment: the choice to delve into the world of code. What started as early sparks of interest in logical reasoning and problem-solving became the seed for my journey as a web developer. Little did I know, those initial steps in grade school would lead to a career where code became my language of creation and innovation.</p>
+                            <div class="pointer"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="life-experiences col-lg col-sm-6">
                     <h2>Work</h2>
-                    <div class="experiences">
-                        <h3 class="subject">Domino’s pizza</h3>
-                        <h3 class="time-stamps">2022-now:</h3>
-                        <p class="experience-text">As a part-time Domino's bicycle courier, I successfully delivered pizzas to customers, prioritizing punctuality and service quality. This role improved my time management, customer service, and multitasking skills.</p>
-                        <div class="pointer"></div>
+                    <div class="experience-holder">
+                        <div class="experiences">
+                            <h3 class="subject">Domino’s pizza</h3>
+                            <h3 class="time-stamps">2022-now:</h3>
+                            <p class="experience-text">As a part-time Domino's bicycle courier, I successfully delivered pizzas to customers, prioritizing punctuality and service quality. This role improved my time management, customer service, and multitasking skills.</p>
+                            <div class="pointer"></div>
+                        </div>
+                        <div class="experiences hidExperiences">
+                            <h3 class="subject">McDonalds</h3>
+                            <h3 class="time-stamps">2021-2021:</h3>
+                            <p class="experience-text">During my time working at McDonald's as a batch cook, I gained valuable insights into the fast-paced and dynamic world of food service. This experience not only honed my culinary skills but also taught me crucial lessons in teamwork, efficiency, and customer service.</p>
+                            <div class="pointer"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="life-experiences col-lg col-sm-6">
                     <h2>Hobbies</h2>
-                    <div class="experiences">
-                        <h3 class="subject">Basketbal</h3>
-                        <h3 class="time-stamps">2018-now:</h3>
-                        <p class="experience-text">Engaging in basketball as a player and as a trainer has strengthened my teamwork, leadership, and adaptability skills. As a basketball trainer, I've honed my ability to convey complex ideas and motivate individuals, showcasing my dedication to personal growth and mentorship.</p>
-                        <div class="pointer"></div>
+                    <div class="experience-holder">
+                        <div class="experiences">
+                            <h3 class="subject">Basketbal</h3>
+                            <h3 class="time-stamps">2018-now:</h3>
+                            <p class="experience-text">Engaging in basketball as a player and as a trainer has strengthened my teamwork, leadership, and adaptability skills. As a basketball trainer, I've honed my ability to convey complex ideas and motivate individuals, showcasing my dedication to personal growth and mentorship.</p>
+                            <div class="pointer"></div>
+                        </div>
+                        <div class="experiences hidExperiences">
+                            <h3 class="subject">Tennis</h3>
+                            <h3 class="time-stamps">2014-2022:</h3>
+                            <p class="experience-text">Nailing precise shots, staying fit for the long rallies, and shaking off tough moments build mental toughness. Figuring out strategies and adapting to opponents teach me quick thinking. Whether going solo or rocking doubles, teamwork and communication come into play. Tennis isn't just a sport; it's a mix of fitness, resilience, and adaptability.</p>
+                            <div class="pointer"></div>
+                        </div>
+                        <div class="experiences hidExperiences">
+                            <h3 class="subject">Chess</h3>
+                            <h3 class="time-stamps">2018-2021:</h3>
+                            <p class="experience-text">My journey through the intricate realms of chess has cultivated a set of invaluable skills. From strategic thinking and analytical prowess to problem-solving and decision-making under pressure, chess has been a crucible for refining my mental acumen. Patience, endurance, and the ability to learn from mistakes have become second nature, contributing not only to my success on the board but also to a strategic mindset applicable to various facets of life.</p>
+                            <div class="pointer"></div>
+                        </div>
+                        <div class="experiences hidExperiences">
+                            <h3 class="subject">Soccer</h3>
+                            <h3 class="time-stamps">2012-2018:</h3>
+                            <p class="experience-text">Every precise pass and strategic assist is a language spoken on the field, weaving a narrative of collaboration. It's not just about scoring; it's about creating opportunities for teammates to shine. Sharing assists isn't just a stat; it's a celebration of collective success. Soccer has taught me that the beauty of the game lies not only in the goals but in the connections made through every pass and assist.</p>
+                            <div class="pointer"></div>
+                        </div>
                     </div>
                 </div>
             </div>

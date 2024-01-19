@@ -1,14 +1,24 @@
 @use 'sass:math';
 
 @import "~bootstrap/scss/bootstrap";
-::-webkit-scrollbar-thumb{
-  display: none;
-}
 ::-webkit-scrollbar{
+  // color: #0AD3FF;
+  background-color: #35353D;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #35353D;
+  border-radius: 15px;
+  border: #23232B 1px solid;
+}
+::-webkit-scrollbar-button{
   display: none;
 }
+::-webkit-scrollbar-track{
+  background-color: #23232B;
+  border-radius: 15px;
+}
+
 body{
-  scrollbar-width: none;
   overflow-x: hidden;
 }
 
@@ -275,7 +285,7 @@ nav{
 }
 
 .pointer {
-  width: 100%;
+  width: 90%;
   height: 40px;
   position: relative;
   margin-top: auto;
@@ -306,25 +316,46 @@ nav{
   height: 75%;
   width: 100%;
   .life-experiences{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: transform 1s;
     h2{
       font-size: 55px;
       font-weight: bold;
     }
-    .experiences{
-      height: 80%;
+    .experience-holder{
       display: flex;
-      flex-direction: column;
-      h3{
-        color: #D5BAB2;
+      flex-direction: row;
+      height: 100%;
+      overflow-x: auto;
+      .experiences{
+        overflow: none;
+        height: 80%;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        flex: none;
+        h3{
+          color: #D5BAB2;
+          font-size: 1.4vw;
+        }
+        p{
+          color: #D5BAB2;
+          font-size: 1vw;
+          padding: 0 5px;
+        }
       }
-      p{
-        color: #D5BAB2;
-        font-size: 1vw;
+      .hidExperiences{
+        display: none;
+        width: 25%;
       }
     }
+  }
+  .life-experiences:hover{
+    transform: scale(1.05);
   }
 
   $bannerCollor: '#ff4242', '#A589DD', '#0AD3FF', '#58CB00';
@@ -570,6 +601,12 @@ nav{
     border-bottom: 15px solid transparent;
   }
   .pointer:before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    bottom: 0;
+    width: 0;
+    height: 0;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
   }
@@ -584,15 +621,17 @@ nav{
       h2{
         font-size: 50px;
       }
-      .experiences{
-        height: 100%;
-        h3{
-          font-size: 25px;
-          margin-bottom: 3px;
-        }
-        p{
-          font-size: 23px;
-          margin: 0;
+      .experience-holder{
+        .experiences{
+          height: 100%;
+          h3{
+            font-size: 25px;
+            margin-bottom: 3px;
+          }
+          p{
+            font-size: 23px;
+            margin: 0;
+          }
         }
       }
     }
